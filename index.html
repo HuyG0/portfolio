@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,118 +7,66 @@
   <title>HuyGo · Engineering Student Portfolio</title>
 
   <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
-
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./css/style.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <style>
-    .service-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      margin-bottom: 50px;
-    }
-
-    .timeline-list {
-      margin-bottom: 0;
-    }
-
-    /* adjust for education replacement */
-    .education-section .title-wrapper {
-      margin-bottom: 20px;
-    }
-
-    .about-text p:first-of-type {
-      margin-bottom: 15px;
-    }
-
-    /* contact form button active state better */
-    .form-btn:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
-    }
-  </style>
 </head>
 
 <body>
-
   <main>
 
-    <!--
-      - #SIDEBAR (unchanged personal info)
-    -->
+    <!-- SIDEBAR -->
     <aside class="sidebar" data-sidebar>
-
       <div class="sidebar-info">
-
         <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="HuyGo" width="80">
+          <img src="./resources/images/profile.png" alt="HuyGo" width="80">
         </figure>
-
         <div class="info-content">
           <h1 class="name" title="HuyGo">HuyGo</h1>
           <p class="title">Engineering Student</p>
         </div>
-
         <button class="info_more-btn" data-sidebar-btn>
           <span>Show Contacts</span>
           <ion-icon name="chevron-down"></ion-icon>
         </button>
-
       </div>
 
       <div class="sidebar-info_more">
-
         <div class="separator"></div>
 
         <ul class="contacts-list">
           <li class="contact-item">
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
+            <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
             <div class="contact-info">
               <p class="contact-title">Email</p>
               <a href="mailto:ndinhhuyy@gmail.com" class="contact-link">ndinhhuyy@gmail.com</a>
             </div>
           </li>
-
           <li class="contact-item">
-            <div class="icon-box">
-              <ion-icon name="logo-github"></ion-icon>
-            </div>
+            <div class="icon-box"><ion-icon name="logo-github"></ion-icon></div>
             <div class="contact-info">
               <p class="contact-title">GitHub</p>
               <a href="https://github.com/HuyG0" class="contact-link" target="_blank">github.com/HuyG0</a>
             </div>
           </li>
-
           <li class="contact-item">
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
+            <div class="icon-box"><ion-icon name="phone-portrait-outline"></ion-icon></div>
             <div class="contact-info">
               <p class="contact-title">Phone</p>
               <a href="tel:+84965090104" class="contact-link">+84 (0) 965090104</a>
             </div>
           </li>
-
           <li class="contact-item">
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
+            <div class="icon-box"><ion-icon name="calendar-outline"></ion-icon></div>
             <div class="contact-info">
               <p class="contact-title">Birthday</p>
               <time datetime="2004-01-09">Jan 9, 2004</time>
             </div>
           </li>
-
           <li class="contact-item">
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
+            <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
             <div class="contact-info">
               <p class="contact-title">Location</p>
               <address>Cam Pha, Quang Ninh, Vietnam</address>
@@ -131,131 +78,405 @@
 
         <ul class="social-list">
           <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
+            <a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a>
           </li>
           <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
+            <a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a>
+          </li>
+          <li class="social-item">
+            <a href="https://github.com/HuyG0" class="social-link" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+          </li>
         </ul>
-
       </div>
-
     </aside>
 
-
-    <!--
-      - #main-content
-    -->
+    <!-- MAIN CONTENT -->
     <div class="main-content">
 
-      <!--
-        - #NAVBAR (kept all for navigation, but only About/Resume etc will be visible; we keep original menu structure)
-      -->
+      <!-- NAVBAR -->
       <nav class="navbar">
         <ul class="navbar-list">
           <li class="navbar-item">
             <button class="navbar-link active" data-nav-link>About</button>
           </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Skills</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Projects</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
         </ul>
       </nav>
 
-
-      <!--
-        - #ABOUT 
-        This is the main visible section: only About content with Education replacing "What i'm doing"
-        We removed Testimonials & Clients sections as requested (only keep about info & education)
-      -->
+      <!-- ABOUT -->
       <article class="about active" data-page="about">
-
         <header>
-          <h2 class="h2 article-title">About me</h2>
+          <h2 class="h2 article-title">About Me</h2>
         </header>
 
         <section class="about-text">
           <p>
-            I'm an engineering student of electronics and telecommunications.
+            I'm an electronics and telecommunications engineering student at Hanoi Open University,
+            passionate about embedded systems, signal processing, and building things that bridge
+            the physical and digital worlds.
           </p>
-          <!-- <p>
-            Currently focused on embedded systems, signal processing, and web technologies. I thrive at the intersection of technical depth and creative design, turning complex problems into seamless, human-centric outcomes. My journey as an engineering student allows me to constantly explore emerging fields and refine my craft.
-          </p> -->
+          <p>
+            I enjoy exploring how hardware and software can work together to solve real problems —
+            from low-level firmware to full-stack web development. Outside of studying, I love
+            tinkering with electronics projects, contributing to open-source, and continuously
+            learning new technologies.
+          </p>
         </section>
 
+        <!-- What I'm doing -->
+        <section class="service">
+          <h3 class="h3 service-title">What I'm Doing</h3>
+          <ul class="service-list">
+            <li class="service-item">
+              <div class="service-icon-box">
+                <ion-icon name="hardware-chip-outline" style="font-size:40px; color: var(--orange-yellow-crayola);"></ion-icon>
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Embedded Systems</h4>
+                <p class="service-item-text">
+                  Working with microcontrollers (Arduino, STM32) to build real-time embedded applications and IoT devices.
+                </p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <ion-icon name="code-slash-outline" style="font-size:40px; color: var(--orange-yellow-crayola);"></ion-icon>
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web Development</h4>
+                <p class="service-item-text">
+                  Building clean, responsive websites and web apps using HTML, CSS, JavaScript, and modern frameworks.
+                </p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <ion-icon name="pulse-outline" style="font-size:40px; color: var(--orange-yellow-crayola);"></ion-icon>
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Signal Processing</h4>
+                <p class="service-item-text">
+                  Studying and applying DSP concepts for audio, communications, and sensor data analysis.
+                </p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <ion-icon name="git-branch-outline" style="font-size:40px; color: var(--orange-yellow-crayola);"></ion-icon>
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Open Source</h4>
+                <p class="service-item-text">
+                  Contributing to and learning from open-source projects on GitHub. Building in public and sharing knowledge.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Education -->
         <section class="timeline">
-
           <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
+            <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
             <h3 class="h3">Education</h3>
           </div>
-
           <ol class="timeline-list">
-
             <li class="timeline-item">
-
               <h4 class="h4 timeline-item-title">HaNoi Open University</h4>
-
               <span>2022 — 2027</span>
-
               <p class="timeline-text">
-                Hanoi Open University is the place where I study and develop myself to become more mature in the future.
+                Bachelor's degree in Electronics and Telecommunications Engineering. Focused on embedded systems,
+                signal processing, and wireless communications.
               </p>
-
             </li>
-
             <li class="timeline-item">
-
               <h4 class="h4 timeline-item-title">Cam Pha High School</h4>
-
               <span>2018 — 2022</span>
-
               <p class="timeline-text">
-                Cam Pha High School is the school that I can never forget from my time as a student. 
+                Graduated with a strong focus on mathematics and physics. Developed a passion for
+                electronics and technology during these foundational years.
               </p>
-
             </li>
-
           </ol>
+        </section>
+      </article>
 
+      <!-- SKILLS -->
+      <article class="skills" data-page="skills">
+        <header>
+          <h2 class="h2 article-title">Skills</h2>
+        </header>
+
+        <section class="skill-group">
+          <div class="title-wrapper">
+            <div class="icon-box"><ion-icon name="hardware-chip-outline"></ion-icon></div>
+            <h3 class="h3">Hardware &amp; Embedded</h3>
+          </div>
+          <ul class="skills-list">
+            <li class="skills-item">
+              <div class="skill-label">
+                <h5 class="h5">Arduino / AVR</h5><span>75%</span>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 75%"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="skill-label">
+                <h5 class="h5">STM32 / ARM Cortex</h5><span>55%</span>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 55%"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="skill-label">
+                <h5 class="h5">Circuit Design / PCB</h5><span>60%</span>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 60%"></div>
+              </div>
+            </li>
+          </ul>
         </section>
 
+        <section class="skill-group">
+          <div class="title-wrapper">
+            <div class="icon-box"><ion-icon name="code-slash-outline"></ion-icon></div>
+            <h3 class="h3">Programming</h3>
+          </div>
+          <ul class="skills-list">
+            <li class="skills-item">
+              <div class="skill-label">
+                <h5 class="h5">C / C++</h5><span>70%</span>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="skill-label">
+                <h5 class="h5">Python</h5><span>65%</span>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 65%"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="skill-label">
+                <h5 class="h5">HTML / CSS / JavaScript</h5><span>70%</span>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%"></div>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="skill-group">
+          <div class="title-wrapper">
+            <div class="icon-box"><ion-icon name="construct-outline"></ion-icon></div>
+            <h3 class="h3">Tools &amp; Technologies</h3>
+          </div>
+          <ul class="skill-tags">
+            <li class="skill-tag">Git &amp; GitHub</li>
+            <li class="skill-tag">VS Code</li>
+            <li class="skill-tag">Linux</li>
+            <li class="skill-tag">MATLAB</li>
+            <li class="skill-tag">Proteus</li>
+            <li class="skill-tag">KiCad</li>
+            <li class="skill-tag">Figma</li>
+            <li class="skill-tag">Docker</li>
+          </ul>
+        </section>
+      </article>
+
+      <!-- PROJECTS -->
+      <article class="projects" data-page="projects">
+        <header>
+          <h2 class="h2 article-title">Projects</h2>
+        </header>
+
+        <ul class="project-list">
+
+          <li class="project-item">
+            <div class="project-img-box">
+              <ion-icon name="hardware-chip-outline" class="project-placeholder-icon"></ion-icon>
+            </div>
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="project-category">Embedded Systems</span>
+                <a href="https://github.com/HuyG0" target="_blank" class="project-link">
+                  <ion-icon name="logo-github"></ion-icon> View on GitHub
+                </a>
+              </div>
+              <h3 class="h3 project-title">Smart Home Controller</h3>
+              <p class="project-text">
+                An Arduino-based home automation system that controls lighting, temperature sensors,
+                and appliances via a simple web interface over WiFi using ESP8266.
+              </p>
+              <ul class="project-tags">
+                <li>Arduino</li><li>ESP8266</li><li>C++</li><li>HTML/CSS</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="project-item">
+            <div class="project-img-box">
+              <ion-icon name="pulse-outline" class="project-placeholder-icon"></ion-icon>
+            </div>
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="project-category">Signal Processing</span>
+                <a href="https://github.com/HuyG0" target="_blank" class="project-link">
+                  <ion-icon name="logo-github"></ion-icon> View on GitHub
+                </a>
+              </div>
+              <h3 class="h3 project-title">Digital Filter Visualizer</h3>
+              <p class="project-text">
+                A Python tool for visualizing FIR/IIR filter frequency responses and applying
+                them to audio signals in real time, built with NumPy and Matplotlib.
+              </p>
+              <ul class="project-tags">
+                <li>Python</li><li>NumPy</li><li>Matplotlib</li><li>DSP</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="project-item">
+            <div class="project-img-box">
+              <ion-icon name="globe-outline" class="project-placeholder-icon"></ion-icon>
+            </div>
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="project-category">Web Development</span>
+                <a href="https://github.com/HuyG0" target="_blank" class="project-link">
+                  <ion-icon name="logo-github"></ion-icon> View on GitHub
+                </a>
+              </div>
+              <h3 class="h3 project-title">Personal Portfolio</h3>
+              <p class="project-text">
+                This very portfolio website — designed and built from scratch with a focus on
+                clean aesthetics, responsiveness, and smooth interactions using vanilla HTML/CSS/JS.
+              </p>
+              <ul class="project-tags">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li>
+              </ul>
+            </div>
+          </li>
+
+        </ul>
+
+        <p class="projects-note">
+          <ion-icon name="information-circle-outline"></ion-icon>
+          More projects coming soon — check my <a href="https://github.com/HuyG0" target="_blank">GitHub</a> for the latest.
+        </p>
+      </article>
+
+      <!-- CONTACT -->
+      <article class="contact" data-page="contact">
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox">
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59686.12!2d107.339!3d21.0028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314a5ea7d8d19889%3A0xad73a94c2a9c3d8a!2sCam%20Pha%2C%20Quang%20Ninh!5e0!3m2!1sen!2s!4v1"
+              width="400" height="300" loading="lazy"
+              title="Cam Pha, Quang Ninh, Vietnam">
+            </iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+          <h3 class="h3 form-title">Send a Message</h3>
+
+          <div class="input-wrapper">
+            <input type="text" name="fullname" class="form-input" placeholder="Full Name" required>
+            <input type="email" name="email" class="form-input" placeholder="Email Address" required>
+          </div>
+
+          <textarea name="message" class="form-input" placeholder="Your Message" required></textarea>
+
+          <button class="form-btn" id="sendBtn" onclick="handleContactForm(event)">
+            <ion-icon name="paper-plane"></ion-icon>
+            <span>Send Message</span>
+          </button>
+          <p class="form-status" id="formStatus"></p>
+        </section>
       </article>
 
     </div>
   </main>
 
-
-  <!--
-    - custom js link (original)
-  -->
-  <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicons
-  -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-  <!-- quick script to ensure that form button simulation works as original but minimal -->
   <script>
-    // preserve original interactive behavior for contact form and any dynamic classes
-    (function() {
-      // handle sidebar toggle (from original script patterns)
-      const sidebarBtn = document.querySelector('[data-sidebar-btn]');
-      const sidebar = document.querySelector('[data-sidebar]');
-      if(sidebarBtn && sidebar) {
-        sidebarBtn.addEventListener('click', () => {
-          sidebar.classList.toggle('active');
-        });
-      }
-      // filter & modals basic simulation: keep existing events if script.js loaded, but no conflict
-      console.log("Customized version with education focused on about page");
-    })();
+    // Sidebar toggle
+    const sidebarBtn = document.querySelector('[data-sidebar-btn]');
+    const sidebar = document.querySelector('[data-sidebar]');
+    if (sidebarBtn && sidebar) {
+      sidebarBtn.addEventListener('click', () => sidebar.classList.toggle('active'));
+    }
+
+    // Nav tab switching
+    const navLinks = document.querySelectorAll('[data-nav-link]');
+    const articles = document.querySelectorAll('[data-page]');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        const target = link.textContent.trim().toLowerCase();
+        navLinks.forEach(l => l.classList.remove('active'));
+        articles.forEach(a => a.classList.remove('active'));
+        link.classList.add('active');
+        const targetArticle = document.querySelector(`[data-page="${target}"]`);
+        if (targetArticle) targetArticle.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+
+    // Animate skill bars when Skills tab becomes visible
+    function animateSkillBars() {
+      document.querySelectorAll('.skill-progress-fill').forEach(bar => {
+        const width = bar.style.width;
+        bar.style.width = '0';
+        setTimeout(() => { bar.style.width = width; }, 100);
+      });
+    }
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (link.textContent.trim().toLowerCase() === 'skills') {
+          setTimeout(animateSkillBars, 50);
+        }
+      });
+    });
+
+    // Contact form handler
+    function handleContactForm(e) {
+      e.preventDefault();
+      const btn = document.getElementById('sendBtn');
+      const status = document.getElementById('formStatus');
+      btn.disabled = true;
+      btn.innerHTML = '<ion-icon name="hourglass-outline"></ion-icon><span>Sending…</span>';
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.innerHTML = '<ion-icon name="paper-plane"></ion-icon><span>Send Message</span>';
+        status.textContent = '✓ Message sent! I\'ll get back to you soon.';
+        status.style.color = 'var(--cat-green)';
+        setTimeout(() => { status.textContent = ''; }, 5000);
+      }, 1500);
+    }
   </script>
 </body>
-
 </html>
