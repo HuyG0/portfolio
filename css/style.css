@@ -350,50 +350,83 @@ main { margin: 15px 12px; margin-bottom: 75px; min-width: 259px; }
 .projects-note a:hover { text-decoration: underline; }
 
 /*--- CONTACT ---*/
-.contact .article-title { margin-bottom: 20px; }
+.contact .article-title { margin-bottom: 15px; }
 
-.mapbox {
-  position: relative; height: 200px;
-  width: 100%; border-radius: 16px;
-  border: 1px solid var(--jet); overflow: hidden;
+.contact-intro {
+  color: var(--light-gray); font-size: var(--fs-6); font-weight: var(--fw-300);
+  line-height: 1.6; margin-bottom: 25px;
+}
+
+.contact-email-card {
+  display: flex; align-items: center; gap: 16px;
+  position: relative;
+  background: var(--border-gradient-onyx);
+  border-radius: 16px; padding: 20px 22px;
   margin-bottom: 30px;
+  box-shadow: var(--shadow-2);
+  z-index: 1;
+  transition: transform var(--transition-1);
 }
-.mapbox figure { height: 100%; }
-.mapbox iframe { width: 100%; height: 100%; border: none; filter: grayscale(.7) invert(.1); }
-
-.form-title { margin-bottom: 20px; }
-
-.input-wrapper { display: grid; grid-template-columns: 1fr; gap: 15px; margin-bottom: 15px; }
-
-.form-input {
-  color: var(--white-2); font-size: var(--fs-6); font-weight: var(--fw-400);
-  padding: 13px 20px; border-radius: 14px;
-  border: 1px solid var(--jet); background: var(--eerie-black-1);
-  outline: none; transition: border-color var(--transition-1);
-}
-.form-input::placeholder { font-weight: var(--fw-400); color: var(--light-gray-70); }
-.form-input:focus { border-color: var(--orange-yellow-crayola); }
-textarea.form-input { min-height: 120px; height: 120px; resize: vertical; margin-bottom: 15px; }
-
-.form-btn {
-  position: relative; width: 100%; padding: 13px 20px;
-  color: var(--orange-yellow-crayola); font-size: var(--fs-6); font-weight: var(--fw-500);
-  display: flex; justify-content: center; align-items: center; gap: 10px;
-  background: var(--border-gradient-onyx); border-radius: 14px;
-  box-shadow: var(--shadow-3); z-index: 1;
-  transition: background var(--transition-1);
-}
-.form-btn::before {
+.contact-email-card::before {
   content: ""; position: absolute; inset: 1px; border-radius: inherit;
   background: var(--bg-gradient-jet); z-index: -1;
   transition: background var(--transition-1);
 }
-.form-btn:hover { background: var(--bg-gradient-yellow-1); }
-.form-btn:hover::before { background: var(--bg-gradient-yellow-2); }
-.form-btn:disabled { opacity: .6; cursor: not-allowed; }
-.form-btn ion-icon { font-size: 16px; }
+.contact-email-card:hover { transform: translateY(-3px); }
+.contact-email-card:hover::before { background: var(--bg-gradient-yellow-2); }
 
-.form-status { margin-top: 10px; font-size: var(--fs-7); text-align: center; }
+.contact-email-icon {
+  width: 46px; height: 46px; flex-shrink: 0;
+  background: rgba(249,226,175,.1);
+  border: 1px solid rgba(249,226,175,.2);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; color: var(--orange-yellow-crayola);
+}
+
+.contact-email-info { flex: 1; }
+.contact-email-label {
+  color: var(--light-gray-70); font-size: var(--fs-8);
+  text-transform: uppercase; letter-spacing: .5px; margin-bottom: 4px;
+}
+.contact-email-address {
+  color: var(--white-2); font-size: var(--fs-5); font-weight: var(--fw-500);
+}
+
+.contact-email-arrow {
+  font-size: 20px; color: var(--light-gray-70);
+  transition: color var(--transition-1), transform var(--transition-1);
+}
+.contact-email-card:hover .contact-email-arrow {
+  color: var(--orange-yellow-crayola); transform: translateX(4px);
+}
+
+.contact-socials { margin-top: 30px; }
+
+.contact-socials-title { margin-bottom: 20px; }
+
+.contact-socials-list {
+  display: flex; flex-wrap: wrap; gap: 12px;
+}
+
+.contact-social-btn {
+  display: flex; align-items: center; gap: 9px;
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: 1px solid var(--jet);
+  background: var(--eerie-black-1);
+  color: var(--light-gray);
+  font-size: var(--fs-7); font-weight: var(--fw-400);
+  transition: color var(--transition-1), border-color var(--transition-1), transform var(--transition-1);
+}
+.contact-social-btn ion-icon { font-size: 18px; }
+.contact-social-btn:hover {
+  color: var(--orange-yellow-crayola);
+  border-color: var(--orange-yellow-crayola);
+  transform: translateY(-2px);
+}
+
+
 
 /*--- RESPONSIVE ---*/
 @media (min-width: 580px) {
