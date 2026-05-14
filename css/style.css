@@ -511,3 +511,27 @@ main { margin: 15px 12px; margin-bottom: 75px; min-width: 259px; }
   .timeline-text { max-width: 700px; }
   .project-list { grid-template-columns: repeat(3, 1fr); }
 }
+
+.footer {
+  text-align: center;
+  padding: 20px 12px 90px;
+}
+.footer-copyright {
+  color: var(--light-gray-70);
+  font-size: var(--fs-8);
+  margin-bottom: 6px;
+}
+.footer-credit {
+  color: var(--light-gray-70);
+  font-size: var(--fs-8);
+}
+.footer-credit a {
+  display: inline;
+  color: var(--orange-yellow-crayola);
+  transition: color var(--transition-1);
+}
+.footer-credit a:hover { color: var(--cat-lavender); }
+
+@media(min-width: 1250px) {
+  .footer { padding-bottom: 30px; }
+}
